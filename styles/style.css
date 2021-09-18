@@ -25,6 +25,12 @@ ol {
   text-align: justify;
 }
 
+button {
+  border: 1px solid black;
+  padding: 0 3px 0 3px;
+  background: lightgrey;
+}
+
 .header-home {
   width: 20%;
   height: 100%;
@@ -71,18 +77,53 @@ ol {
 .mainbody1-acrossbox {
   width: 25%;
   height: 100%;
+
   float: left;
+  position: relative;
+
+  display: table
+}
+
+.mainbody1-acrosscontent {
+  width: 100%;
+  height: 87%;
+
+  display: table-cell;
+  margin: auto;
+
+  vertical-align: middle;
+}
+
+.mainbody1-puzzle-title {
+  width:100%;
+  height: 12%;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  background: lightskyblue;
+
+  text-align: center;
+
+  display: table;
+  overflow: hidden;
+}
+
+.mainbody1-puzzle-title-text {
+  width: 100%;
+  height: 100%;
+  
+  display: table-cell; 
+  vertical-align: middle;
 }
 
 .mainbody1-across {
-  position: relative;
-  float:left;
-  top: 90%;
-  transform: translateY(-90%); 
   height: 75%;
   width: 100%;
-  background-color: lightskyblue;
+
+  background-color: white;
   border: 1px solid black ;
+  border-radius: 5px;
+
   text-align: center;
 }
 
@@ -97,7 +138,9 @@ ol {
   position: relative;
   top: 50%;
   transform: translateY(-50%); 
-  height: 95%;
+  height: 0;
+  padding-bottom: 90%;
+  max-width: 90%;
   width: 95%;
   background-color: white;
   border: 1px solid black ;
@@ -107,19 +150,134 @@ ol {
 .mainbody1-downbox {
   width: 25%;
   height: 100%;
-  float: left;
+
+  float: right;
+  position: relative;
+
+  display: table
+}
+
+.mainbody1-downcontent {
+  width: 100%;
+  height: 87%;
+
+  display: table-cell;
+  margin: auto;
+
+  vertical-align: middle;
+}
+
+.mainbody1-puzzle-options {
+  width: 100%;
+  height: 12%;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  background: lightskyblue;
+
+  text-align: center;
+
+  display: table;
+  overflow: hidden;
+}
+
+.mainbody1-check-letter {
+  height:100%;
+  width:100%;
+}
+
+.mainbody1-check-word {
+  height:100%;
+  width:100%;
+
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.mainbody1-solve-letter {
+  height:100%;
+  width:100%;
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.mainbody1-solve-word {
+  height:100%;
+  width: 100%;
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.mainbody1-options1 {
+  width:50%;
+  height: 100%;
+  float:left;
+  align-content: center;
+  margin-top: 3%;
+}
+
+.mainbody-options1A {
+  width: 100%;
+  height: 50%;
+  float:left;
+
+  display: table;
+
+}
+
+
+.mainbody-options1B {
+  width: 100%;
+  height: 50%;
+  float:left;
+
+  position: relative;
+}
+
+.mainbody1-options2 {
+  width:50%;
+  height:100%;
+  float:left;
+
+  position: relative;
+  margin-top: 3%;
+}
+
+.mainbody-options2A {
+  width:100%;
+  height:50%;
+  float:left;
+
+  position: relative;
+}
+
+.mainbody-options2B {
+  width: 100%;
+  height: 50%;
+  float:left;
 }
 
 .mainbody1-down {
-  position: relative;
-  text-align: center;
-  float:left;
-  top: 90%;
-  transform: translateY(-90%); 
   height: 75%;
-  width:100%;
-  background-color: lightskyblue;
+  width: 100%;
+
+  background-color: white;
   border: 1px solid black ;
+  border-radius: 5px;
+
+  text-align: center;
 }
 
 .footer {
