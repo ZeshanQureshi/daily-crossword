@@ -6,8 +6,10 @@
   <link href="styles/style.css" rel="stylesheet">
   <title>Daily Crossword</title>
   <link rel="icon" type="image/ico" href="images/crossword.ico">
+  <script src="scripts/main.js"></script>
 </head>
-<body>
+
+<body onload="initializeScreen()">
   <header>
 
     <div class="header-home">
@@ -38,14 +40,18 @@
 
           <div class="mainbody1-across">
             <h3>Across</h3>
+            <ol>1. Humanize</ol>
+            <ol>3. To be uncontent with action</ol>
+            <ol>5. Garfield snacks</ol>
+            <ol>6. Moose like animal</ol>
           </div>
 
         </div>
       </div>
 
       <div class = "mainbody1-puzzlebox">
-        <div class = mainbody1-puzzle>
-          <h3>Puzzle</h3>
+        <div class = mainbody1-puzzle-container>
+          <table id= "crossword" class = "mainbody1-puzzle"></table>
         </div>
       </div>
 
@@ -80,7 +86,7 @@
               
               <div class = "mainbody-options2A">
                 <div class="mainbody1-solve-word">
-                  <button>Solve Word </button>
+                  <button>Solve Word</button>
                 </div>
               </div>
 
@@ -90,8 +96,9 @@
 
           <div class="mainbody1-down">
             <h3>Down</h3>
-              <ol>1. Best practice</ol>
-              <ol>2. Next step</ol>
+              <ol>2. To make up</ol>
+              <ol>4. To dismiss, visually</ol>
+
             </div>
           
           
@@ -104,8 +111,9 @@
   </div>
 
   <div class="footer">
-    <p>d</p>
+    <div class="footer-text">
+      <p>A work in progress! Next step: to include functionality with the buttons.</p>
+    </div>
   </div>
-
 </body>
 </html>

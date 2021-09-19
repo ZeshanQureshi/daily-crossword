@@ -29,6 +29,26 @@ button {
   border: 1px solid black;
   padding: 0 3px 0 3px;
   background: lightgrey;
+  
+}
+
+.inputBox{
+  width: 40px;
+  height:40px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+table {
+  width:100%;
+}
+
+tr {
+ 
+}
+
+td {
+  white-space: nowrap;
 }
 
 .header-home {
@@ -134,17 +154,23 @@ button {
   float: left;
 }
 
-.mainbody1-puzzle {
+.mainbody1-puzzle-container {
   position: relative;
   top: 50%;
   transform: translateY(-50%); 
   height: 0;
-  padding-bottom: 90%;
-  max-width: 90%;
-  width: 95%;
+  padding-bottom: 63.5%;
+  max-width: 63.5%;
   background-color: white;
   border: 1px solid black ;
   margin:0 auto;
+}
+
+.mainbody1-puzzle {
+  text-align: center;
+	margin: 0;
+	padding: 0;
+	border: 1px solid black;
 }
 
 .mainbody1-downbox {
@@ -237,7 +263,6 @@ button {
 
 }
 
-
 .mainbody-options1B {
   width: 100%;
   height: 50%;
@@ -280,8 +305,14 @@ button {
   text-align: center;
 }
 
-.footer {
+footer {
   height: 40px;
   width: 100%;
   background-color: lightgrey;
+}
+
+.footer-text {
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
