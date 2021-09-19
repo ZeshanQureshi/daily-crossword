@@ -43,12 +43,10 @@ table {
   width:100%;
 }
 
-tr {
- 
-}
-
-td {
-  white-space: nowrap;
+footer {
+  height: 40px;
+  width: 100%;
+  background-color: lightgrey;
 }
 
 .header-home {
@@ -117,6 +115,7 @@ td {
 .mainbody1-puzzle-title {
   width:100%;
   height: 12%;
+  padding: 1%;
 
   border: 1px solid black;
   border-radius: 5px;
@@ -139,6 +138,7 @@ td {
 .mainbody1-across {
   height: 75%;
   width: 100%;
+  padding: 1%;
 
   background-color: white;
   border: 1px solid black ;
@@ -159,11 +159,8 @@ td {
   top: 50%;
   transform: translateY(-50%); 
   height: 0;
-  padding-bottom: 63.5%;
-  max-width: 63.5%;
-  background-color: white;
-  border: 1px solid black ;
-  margin:0 auto;
+  margin: 0 auto;
+  display: table;
 }
 
 .mainbody1-puzzle {
@@ -171,6 +168,7 @@ td {
 	margin: 0;
 	padding: 0;
 	border: 1px solid black;
+  background-color: white;
 }
 
 .mainbody1-downbox {
@@ -196,6 +194,7 @@ td {
 .mainbody1-puzzle-options {
   width: 100%;
   height: 12%;
+  padding: 1%;
 
   border: 1px solid black;
   border-radius: 5px;
@@ -251,7 +250,6 @@ td {
   height: 100%;
   float:left;
   align-content: center;
-  margin-top: 3%;
 }
 
 .mainbody-options1A {
@@ -259,8 +257,9 @@ td {
   height: 50%;
   float:left;
 
+  align-items: center;
+  justify-content: center;
   display: table;
-
 }
 
 .mainbody-options1B {
@@ -277,7 +276,6 @@ td {
   float:left;
 
   position: relative;
-  margin-top: 3%;
 }
 
 .mainbody-options2A {
@@ -297,18 +295,13 @@ td {
 .mainbody1-down {
   height: 75%;
   width: 100%;
+  padding: 1%;
 
   background-color: white;
   border: 1px solid black ;
   border-radius: 5px;
 
   text-align: center;
-}
-
-footer {
-  height: 40px;
-  width: 100%;
-  background-color: lightgrey;
 }
 
 .footer-text {
