@@ -29,7 +29,14 @@ button {
   border: 1px solid black;
   padding: 0 3px 0 3px;
   background: lightgrey;
-  
+  cursor: pointer;
+}
+
+button:hover {
+  border: 1px solid black;
+  padding: 0 3px 0 3px;
+  background: white;
+
 }
 
 .inputBox{
@@ -81,9 +88,9 @@ footer {
 
 .mainbody1 {
   width: 100%;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 100px);
   align-content: center;
-  background: lightblue;
+  background:#eaeaeb;
 }
 
 .mainbody1-contents {
@@ -117,9 +124,9 @@ footer {
   height: 12%;
   padding: 1%;
 
-  border: 1px solid black;
   border-radius: 5px;
-  background: lightskyblue;
+  background: #1F2937;
+  color: white;
 
   text-align: center;
 
@@ -141,7 +148,6 @@ footer {
   padding: 1%;
 
   background-color: white;
-  border: 1px solid black ;
   border-radius: 5px;
 
   text-align: center;
@@ -167,7 +173,6 @@ footer {
   text-align: center;
 	margin: 0;
 	padding: 0;
-	border: 1px solid black;
   background-color: white;
 }
 
@@ -196,9 +201,9 @@ footer {
   height: 12%;
   padding: 1%;
 
-  border: 1px solid black;
   border-radius: 5px;
-  background: lightskyblue;
+  background: #1F2937;
+  color: white;
 
   text-align: center;
 
@@ -209,40 +214,33 @@ footer {
 .mainbody1-check-letter {
   height:100%;
   width:100%;
+
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .mainbody1-check-word {
   height:100%;
   width:100%;
 
-  text-align: center;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .mainbody1-solve-letter {
   height:100%;
   width:100%;
 
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .mainbody1-solve-word {
   height:100%;
   width: 100%;
 
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .mainbody1-options1 {
@@ -268,6 +266,8 @@ footer {
   float:left;
 
   position: relative;
+  justify-content: center;
+  display: table;
 }
 
 .mainbody1-options2 {
@@ -284,12 +284,17 @@ footer {
   float:left;
 
   position: relative;
+  justify-content: center;
+  display: table;
 }
 
 .mainbody-options2B {
   width: 100%;
   height: 50%;
-  float:left;
+
+  position: relative;
+  justify-content: center;
+  display: table;
 }
 
 .mainbody1-down {
@@ -298,14 +303,7 @@ footer {
   padding: 1%;
 
   background-color: white;
-  border: 1px solid black ;
   border-radius: 5px;
 
   text-align: center;
-}
-
-.footer-text {
-  text-align: center;
-  width: 100%;
-  height: 100%;
 }
