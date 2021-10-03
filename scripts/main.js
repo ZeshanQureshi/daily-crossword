@@ -23,7 +23,7 @@ function initializeScreen() {
 
 				cell.innerHTML = '<input type="text" class="inputBox" maxlength="1"\
                          style="text-transform: uppercase" ' + 'id="' + textRec + '"\
-                         onfocus="textInputFocus(' + "'" + textRec + "'"+ ')">';
+                         onfocus="dataInput(' + "'" + textRec + "'"+ ')">';
 			
             } else {
 
@@ -118,8 +118,18 @@ function returnColor() {
 	}
 }
 
-function solveLetter() {
+function dataInput(textID){
+	wordSelector = textID;
+}
 
+function solveLetter() {
+	if (wordSelector != null) {
+		var temp1 = wordSelector;
+		var token = temp1.split("_");
+		var row = token[1];
+		var column = token[2];
+		document.getElementById(temp1).value = crosswordData[row][column];
+	}
 }
 
 function numberWords() {
