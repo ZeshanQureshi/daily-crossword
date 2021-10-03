@@ -78,27 +78,41 @@ function checkLetters() {
 
 function clearScreen() {
 	
-	for (let rowCount = 0 ; rowCount < crosswordData.length ; rowCount++) {
+	for (let row = 0 ; row < crosswordData.length ; row++) {
 
-		for (let columnCount = 0; columnCount < crosswordData.length ; columnCount++) {
+		let rowData = crosswordData[row];
+
+		for (let column = 0 ; column < rowData.length ; column++) {
+
+			if (rowData[column] != 0) {
+				
+				let selectTextData = document.getElementById('text' + '_' + row + '_' + column);
+
+				selectTextData.value = null;
+
+			}
 			
-			let selectTextData = document.getElementById('text' + '_' + rowCount + '_' + columnCount);
-
-			selectTextData.value = null;
 		}
+
 	}
 }
 
 function returnColor() {
 	
-	for (let rowInc = 0 ; rowInc < crosswordData.length ; rowInc++) {
-		
-		let rowInfo = crosswordData[rowInc];
-		
-		for (let columnInc = 0 ; columnInc < crosswordData.length ; columnInc++) {
+	for (let row = 0 ; row < crosswordData.length ; row++) {
 
-			document.getElementById("text" + "_" + rowInc + "_" + columnInc).style.backgroundColor = "white";
+		let rowData = crosswordData[row];
 
+		for (let column = 0 ; column < rowData.length ; column++) {
+
+			if (rowData[column] != 0) {
+				
+				let selectTextData = document.getElementById('text' + '_' + row + '_' + column);
+
+				selectTextData.style.backgroundColor = "white";
+
+			}
+			
 		}
 
 	}
