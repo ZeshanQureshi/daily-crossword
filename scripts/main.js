@@ -43,7 +43,7 @@ function returnColor() {
 
 			if (rowData[column] != 0) {
 				
-				let selectTextData = document.getElementById('text' + '_' + row + '_' + column);
+				let selectTextData = document.getElementById('text_' + row + '_' + column);
 
 				selectTextData.style.backgroundColor = "white";
 
@@ -64,7 +64,7 @@ function clearScreen() {
 
 			if (rowData[column] != 0) {
 				
-				let selectTextData = document.getElementById('text' + '_' + row + '_' + column);
+				let selectTextData = document.getElementById('text_' + row + '_' + column);
 
 				selectTextData.value = null;
 
@@ -93,7 +93,7 @@ function initializeScreen() {
 
 			if (rowData[columnCount] != 0) {
 
-				let textRec = String('text' + '_' + rowCount + '_' + columnCount);
+				let textRec = String('text_' + rowCount + '_' + columnCount);
 
 				cell.innerHTML = '<input type="text" class="inputBox" maxlength="1"\
                          style="text-transform: uppercase" ' + 'id="' + textRec + '"\
@@ -168,46 +168,81 @@ function solveWord() {
 		var row = cellDataText[1];
 		var column = cellDataText[2];
 		
-		
-		for (topReveal = row ; topReveal >= 0 ; topReveal--) {
-
-			if (crosswordData[topReveal][column] != 0) {
-
-				document.getElementById('text' + '_' + topReveal + '_' + column).value = crosswordData[topReveal][column];
-
-				} else break;
-		}
-
-
-		for (rightReveal = column; rightReveal< crosswordData[row].length; rightReveal++) {
-
-			if (crosswordData[row][rightReveal] != 0) {
-
-				document.getElementById('text' + '_' + row + '_' + rightReveal).value = crosswordData[row][rightReveal];
-
-				} else break;
-		}
-		
-
-		for (bottomReveal = row; bottomReveal< crosswordData.length; bottomReveal++) {
-
-			if (crosswordData[bottomReveal][column] != 0) {
-
-				document.getElementById('text' + '_' + bottomReveal + '_' + column).value = crosswordData[bottomReveal][column];
-				
-				} else break;
-		}
-
-
-		for (leftReveal = column; leftReveal >= 0; leftReveal--) {
+		if (document.getElementById(cellData).id == 'text_0_7' ) {
 			
-			if (crosswordData[row][leftReveal] != 0){
+			for (rowNum = 0 ; rowNum <= 9 ; rowNum++) {
 				
-				document.getElementById('text' + '_' + row + '_' + leftReveal).value = crosswordData[row][leftReveal];
+				document.getElementById('text_' + rowNum + '_' + 7).value = crosswordData[rowNum][7];
+
+			}
+
+		} else if (document.getElementById(cellData).id == 'text_6_1') {
+
+			for (columnNum = 1 ; columnNum <= 7 ; columnNum++) {
+
+				document.getElementById('text_6_' + columnNum).value = crosswordData[6][columnNum];
+
+			}
+
+		} else if (document.getElementById(cellData).id == 'text_8_7') {
+
+			for (columnNum = 7 ; columnNum <= 9 ; columnNum++) {
+
+				document.getElementById('text_8_' + columnNum).value = crosswordData[8][columnNum];
+
+			}
+
+		} else if (document.getElementById(cellData).id == 'text_3_7') {
+
+			for (columnNum = 4 ; columnNum <= 9 ; columnNum++) {
+
+				document.getElementById('text_3_' + columnNum).value = crosswordData[3][columnNum];
+
+			}
+
+		} else {
+
+			for (topReveal = row ; topReveal >= 0 ; topReveal--) {
+
+				if (crosswordData[topReveal][column] != 0) {
+
+					document.getElementById('text_' + topReveal + '_' + column).value = crosswordData[topReveal][column];
+
+					} else break;
+			}
+
+
+			for (rightReveal = column; rightReveal< crosswordData[row].length; rightReveal++) {
+
+				if (crosswordData[row][rightReveal] != 0) {
+
+					document.getElementById('text_' + row + '_' + rightReveal).value = crosswordData[row][rightReveal];
+
+					} else break;
+			}
+			
+
+			for (bottomReveal = row; bottomReveal< crosswordData.length; bottomReveal++) {
+
+				if (crosswordData[bottomReveal][column] != 0) {
+
+					document.getElementById('text_' + bottomReveal + '_' + column).value = crosswordData[bottomReveal][column];
+					
+					} else break;
+			}
+
+
+			for (leftReveal = column; leftReveal >= 0; leftReveal--) {
 				
-				} else break;
-		}
+				if (crosswordData[row][leftReveal] != 0){
+					
+					document.getElementById('text_' + row + '_' + leftReveal).value = crosswordData[row][leftReveal];
+					
+					} else break;
+			}
 		
+		}
+
 	}
 
 }
