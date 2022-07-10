@@ -90,7 +90,7 @@ footer {
   width: 100%;
   height: calc(100vh - 100px);
   align-content: center;
-  background:#eaeaeb;
+  background:rgb(245, 245, 220);
 }
 
 .mainbody1-contents {
